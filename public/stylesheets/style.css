@@ -1,0 +1,138 @@
+@charset "utf-8";
+/* CSS Document */
+
+@import "reset.css";
+
+body {
+	font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+	background: #ffffff;
+	line-height: 22px;
+	font-size: 12px;
+}
+a {
+	text-decoration: none;
+	color: #002a5c;
+	padding: 3px;
+}
+a:hover {
+  color: #fff;
+  background: #002a5c;  
+}
+.clear {
+	clear: both;
+}
+
+#header {
+	padding: 15px;
+	background: #000000;
+	color: #e5f1ff;
+	font-weight: bold;
+	border-bottom: 5px solid #eee;
+	font-size: 22px;
+}
+	#header .stats {
+		color: #333;
+		font-size: 11px;
+		margin: 20px 0px 10px 0px;
+	}
+		#header .stats span {
+			background: #fff;
+			padding: 10px;
+		}
+		#header .stats em {
+			font-size: 14px;
+			font-style: normal;
+			color: #003e86;
+		}
+	#header .actions {
+		text-align: left;
+	}
+	#header strong a {
+		font-size: 18px;
+		position: relative;
+		top: 0px;
+	}
+	#header a {
+		color: #e5f1ff;
+		font-weight: bold;
+		font-size: 12px;
+		position: relative;
+		top: -1px;
+	}
+	#header a:hover {
+		color: #ffffff;
+		background: none;
+	}
+	
+#content {
+  padding: 15px;
+}
+  #content h2 {
+    font-size: 28px;
+    margin: 0px 0px 20px 0px;
+    font-weight: normal;
+  }
+	
+.goods {
+	font-size: 16px;
+	color: #fff;
+	display: block;
+}
+	.goods .good {
+		background: url(../images/goodstripe.gif) repeat top left;
+		padding: 15px;
+		border: 5px solid #eee;
+		margin: 15px;
+		width: 250px;
+		float: left;
+	}
+		.goods .good .actions {
+			margin: 10px 0px 10px 0px;
+			padding: 15px;
+			background: #fff;
+			color: #333;
+			font-size: 12px;
+		}
+			.goods .good .actions a {
+				color: #003e86;
+				font-size: 14px;
+				font-weight: normal;
+			}
+			.goods .good .actions a:hover {
+				color: #3e84d5;
+			}
+		.goods .good .meta {
+			font-size: 11px;
+			color: #ddd;
+			margin: 5px 0px 10px 0px;
+		}
+		
+form input, form select, form textarea {
+  padding: 10px;
+  background: #e4f0ff;
+  border: 1px solid #eee;
+  border-radius: 15px;
+  font-size: 14px;
+  color: #002a5c;
+  margin: 10px 0px 10px 0px;
+}
+form input.btn {
+  background: url(../images/goodstripe.gif) repeat top left;
+  border-radius: 15px;
+  border: 0px;
+  padding: 10px 30px 10px 30px;
+  font-size: 18px;
+  color: #fff;
+  font-weight: bold;
+  cursor: pointer;
+  opacity: 0.7;
+}
+form input.btn:hover {
+  opacity: 1.0;
+}
+form label {
+  font-size: 12px;
+  color: #999;
+  font-weight: normal;
+  padding: 0px 0px 0px 5px;
+}

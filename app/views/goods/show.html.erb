@@ -1,0 +1,15 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Desc:</b>
+  <%= @good.desc %>
+</p>
+
+<p>
+  <b>User:</b>
+  <%= @good.user_id %>
+</p>
+
+
+<%= link_to 'Edit', edit_good_path(@good) %> |
+<%= link_to 'Back', goods_path %>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Do Good</title>
+  <%= stylesheet_link_tag :all %>
+  <%= javascript_include_tag :defaults %>
+  <%= csrf_meta_tag %>
+</head>
+<body>
+  <div id="header">
+    <div class="actions">      
+      <% if user_signed_in? %>
+        <strong><%= link_to "Do Good", new_good_path %></strong> /
+        <%= link_to "Good others have done", root_path %> /
+        <%= link_to "Favorites", edit_user_registration_path %> /
+        <%= link_to "Settings", edit_user_registration_path %>       
+      <% else %>
+        <strong><%= link_to "Do Good", new_user_session_path %></strong> /
+        <%= link_to "Good others have done", root_path %> /
+        <%= link_to "Sign In", new_user_session_path %> /
+        <%= link_to "Sign Up", new_user_registration_path %>
+      <% end %>
+      
+    </div>
+    <div class="stats">
+      <span>
+        <em>12</em> good done today, 
+        <em>123</em> good done, 
+        <em><%= User.all.count %></em> do gooders
+      </span>
+    </div>
+  </div>
+  <div id="content">
+    <p class="notice"><%= notice %></p>
+    <p class="alert"><%= alert %></p>
+    <%= yield %>
+  </div>
+</body>
+</html>
