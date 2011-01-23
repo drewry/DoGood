@@ -2,7 +2,7 @@ class GoodsController < ApplicationController
   # GET /goods
   # GET /goods.xml
   def index
-    @goods = Good.all
+    @goods = Good.order("created_at DESC").all
 
     respond_to do |format|
       format.html # index.html.erb
