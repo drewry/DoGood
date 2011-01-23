@@ -17,4 +17,7 @@
   
   <div class="clear"></div>
 </div>
+<% if @favs.empty? %>
+  <p>You don't have any favorites, <%= link_to "go check out good deeds others have done", goods_path %></p>
+<% end %>
 <!-- end the goods -->

@@ -15,11 +15,13 @@
           <% end %>        
         this.
       </div>
-      <% if current_user.id == good.user.id %>
-        <div class="myactions">
-          <%= link_to 'Edit Deed', edit_good_path(good) %>
-          <%= link_to 'Delete Deed', good, :confirm => 'Are you sure?', :method => :delete %>
-        </div>        
+      <% if user_signed_in? %>
+        <% if current_user.id == good.user.id %>
+          <div class="myactions">
+            <%= link_to 'Edit Deed', edit_good_path(good) %>
+            <%= link_to 'Delete Deed', good, :confirm => 'Are you sure?', :method => :delete %>
+          </div>        
+        <% end %>
       <% end %>
     </div>
   <!-- end good -->
