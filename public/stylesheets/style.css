@@ -30,6 +30,9 @@ a:hover {
 	border-bottom: 5px solid #eee;
 	font-size: 22px;
 }
+  #header span {
+    font-size: 14px;
+  }
 	#header .stats {
 		color: #333;
 		font-size: 11px;
@@ -69,7 +72,12 @@ a:hover {
 }
   #content h2 {
     font-size: 28px;
-    margin: 0px 0px 20px 0px;
+    margin: 10px 0px 20px 0px;
+    font-weight: normal;
+  }
+  #content h1 {
+    font-size: 34px;
+    margin: 10px 0px 26px 0px;
     font-weight: normal;
   }
 	
@@ -100,6 +108,11 @@ a:hover {
 			}
 			.goods .good .actions a:hover {
 				color: #3e84d5;
+				background: none;
+			}
+			.goods .good .myactions a {
+			  color: #fff;
+			  font-size: 12px;
 			}
 		.goods .good .meta {
 			font-size: 11px;
@@ -115,6 +128,7 @@ form input, form select, form textarea {
   font-size: 14px;
   color: #002a5c;
   margin: 10px 0px 10px 0px;
+  font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
 }
 form input.btn {
   background: url(../images/goodstripe.gif) repeat top left;
@@ -135,4 +149,9 @@ form label {
   color: #999;
   font-weight: normal;
   padding: 0px 0px 0px 5px;
+}
+form #description {
+  width: 350px;
+  height: 150px;
+  font-size: 18px;
 }

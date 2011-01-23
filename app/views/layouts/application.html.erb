@@ -10,13 +10,14 @@
   <div id="header">
     <div class="actions">      
       <% if user_signed_in? %>
-        <strong><%= link_to "Do Good", new_good_path %></strong> /
-        <%= link_to "Good others have done", root_path %> /
-        <%= link_to "Favorites", edit_user_registration_path %> /
-        <%= link_to "Settings", edit_user_registration_path %>       
+        <span>Click here to </span><strong><%= link_to "Do Good", new_good_path %></strong> /
+        <%= link_to "Good deeds others have done", goods_path %> /
+        <%= link_to "Favorites", favorites_path %> /
+        <%= link_to "Settings", edit_user_registration_path %>  /  
+        <%= link_to "Log Out", destroy_user_session_path %>       
       <% else %>
-        <strong><%= link_to "Do Good", new_user_session_path %></strong> /
-        <%= link_to "Good others have done", root_path %> /
+        <span>Start </span><strong><%= link_to "Doing Good", new_user_session_path %></strong> /
+        <%= link_to "Good deeds others have done", goods_path %> /
         <%= link_to "Sign In", new_user_session_path %> /
         <%= link_to "Sign Up", new_user_registration_path %>
       <% end %>
@@ -24,8 +25,11 @@
     </div>
     <div class="stats">
       <span>
-        <em>12</em> good done today, 
-        <em>123</em> good done, 
+        <em>
+          <% todaysthings = Good.posted_within 24.hours.ago %>
+          <%= todaysthings.count %>
+        </em> good deeds done today, 
+        <em><%= Good.all.count %></em> good deeds done so far, 
         <em><%= User.all.count %></em> do gooders
       </span>
     </div>

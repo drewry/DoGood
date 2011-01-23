@@ -12,14 +12,11 @@
   <% end %>
 
   <div class="field">
-    <%= f.label :desc %><br />
-    <%= f.text_area :desc %>
+    <%= f.label :desc, "Description of your good deed, maximum of 120 characters" %><br />
+    <%= f.text_area :desc, :id => 'description' %>
   </div>
-  <div class="field">
-    <%= f.label :user_id %><br />
-    <%= f.text_field :user_id %>
-  </div>
+  <%= f.hidden_field :user_id, :value => current_user.id %>
   <div class="actions">
-    <%= f.submit %>
+    <%= f.submit "Record Good Deed", :class => 'btn' %>
   </div>
 <% end %>

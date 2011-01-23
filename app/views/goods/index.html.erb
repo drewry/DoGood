@@ -1,25 +1,30 @@
-<h1>Listing goods</h1>
-
-<table>
-  <tr>
-    <th>Desc</th>
-    <th>User</th>
-    <th></th>
-    <th></th>
-    <th></th>
-  </tr>
-
-<% @goods.each do |good| %>
-  <tr>
-    <td><%= good.desc %></td>
-    <td><%= good.user_id %></td>
-    <td><%= link_to 'Show', good %></td>
-    <td><%= link_to 'Edit', edit_good_path(good) %></td>
-    <td><%= link_to 'Destroy', good, :confirm => 'Are you sure?', :method => :delete %></td>
-  </tr>
-<% end %>
-</table>
-
-<br />
-
-<%= link_to 'New Good', new_good_path %>
+<!-- begin the goods -->
+<div class="goods">
+  
+  <% @goods.each do |good| %>
+  <!-- begin good -->
+    <div class="good">
+      <div class="desc"><%= good.desc %></div>
+      <div class="meta"><em><%= good.created_at.strftime("posted %B %d, %Y at %I:%M %p") %> GMT</em></div>
+      <div class="actions">
+        So far <%= Favorite.where(:good_id => good).count %> ppl have 
+          <% if user_signed_in? and current_user.id != good.user.id %>
+            <%= link_to 'favorited', add_my_favorite_path(good) %>
+          <% else %>
+            favorited
+          <% end %>        
+        this.
+      </div>
+      <% if current_user.id == good.user.id %>
+        <div class="myactions">
+          <%= link_to 'Edit Deed', edit_good_path(good) %>
+          <%= link_to 'Delete Deed', good, :confirm => 'Are you sure?', :method => :delete %>
+        </div>        
+      <% end %>
+    </div>
+  <!-- end good -->
+  <% end %>
+  
+  <div class="clear"></div>
+</div>
+<!-- end the goods -->

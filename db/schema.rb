@@ -10,7 +10,14 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110123014319) do
+ActiveRecord::Schema.define(:version => 20110123022810) do
+
+  create_table "favorites", :force => true do |t|
+    t.integer  "good_id"
+    t.integer  "user_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "goods", :force => true do |t|
     t.text     "desc"
