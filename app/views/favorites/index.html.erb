@@ -9,7 +9,12 @@
       <div class="desc"><%= good.desc %></div>
       <div class="meta"><em><%= good.created_at.strftime("posted %B %d, %Y at %I:%M %p") %> GMT</em></div>
       <div class="actions">
-        You've favorited this, <%= link_to 'unfavorite?', fav, :confirm => 'Are you sure?', :method => :delete %>
+        <div>
+          You've favorited this, <%= link_to 'unfavorite?', fav, :confirm => 'Are you sure?', :method => :delete %>
+        </div>
+        <div>
+          Has this deed <%= link_to "inspired you?", inspired_me_path(good) %>
+        </div>
       </div>
     </div>
   <!-- end good -->
