@@ -155,3 +155,41 @@ form #description {
   height: 150px;
   font-size: 18px;
 }
+
+#home {
+}
+  #home h2 {
+    font-size: 16px;
+    color: #fff;
+    padding: 0px 5px 5px 5px;
+    border-bottom: 1px solid #536b86;
+    margin: 5px 0px 5px 0px;
+  }
+  #home #pic {
+    float: left;
+  }
+  #home #start {
+    width: 220px;
+  }
+  #home a {
+    color: #73b4ff;
+    font-weight: bold;
+    margin: 0px 0px 0px 0px;
+    padding: 0px 0px 0px 0px;
+  }
+  #home a:hover {
+    color: #fff;
+  }
+  #home p {
+    margin: 0px 0px 15px 0px;
+    padding: 0px 5px 0px 25px;
+  }
+.home_box {
+  float: left;
+  background: #092b52;
+  border: 1px solid #468ad9;
+  padding: 15px;
+  color: #fff;
+  line-height: 18px;
+  margin: 0px 10px 0px 10px;
+}

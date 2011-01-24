@@ -1,3 +1,11 @@
-<h2>Welcome</h2>
-<div class="home_box">
+<div id="home">
+  <img src="images/home.jpg" id="pic" />
+  <div class="home_box" id="start">
+    <h2>Start doing good</h2>
+    <p>Already a member?<br /> <%= link_to "Sign in", new_user_session_path %> and get started.</p>
+    <p>Or <%= link_to "Sign up", new_user_registration_path %> with us and you can start reporting the good deeds you do each day.</p>
+    <h2>Get Inspired</h2>
+    <p><%= link_to "Browse", goods_path %> others good deeds each day and get inspired to do good yourself.</p>
+  </div>
+  <div class="clear"></div>
 </div>
