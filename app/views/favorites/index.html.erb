@@ -15,6 +15,11 @@
         <div>
           Has this deed <%= link_to "inspired you?", inspired_me_path(good) %>
         </div>
+        <% if good.parent_id != nil %>
+          <div>
+            Inspired by <%= link_to "this deed.", good_path(good.parent_id) %>
+          </div>
+        <% end %>
       </div>
     </div>
   <!-- end good -->

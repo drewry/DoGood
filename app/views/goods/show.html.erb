@@ -18,6 +18,11 @@
         <div>
           This deed has inspired <%= pluralize(Good.where(:parent_id => @good.id).count, "good deed") %>, has it <%= link_to "inspired you?", inspired_me_path(@good) %>
         </div>
+        <% if @good.parent_id != nil %>
+          <div>
+            Inspired by <%= link_to "this deed.", good_path(@good.parent_id) %>
+          </div>
+        <% end %>
       </div>
       <% if user_signed_in? %>
         <% if current_user.id == @good.user.id %>
