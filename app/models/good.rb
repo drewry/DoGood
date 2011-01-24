@@ -1,5 +1,7 @@
 class Good < ActiveRecord::Base
   belongs_to :user
+  belongs_to :good
+  has_many :goods
   has_many :favorites
   
   named_scope :posted_before, lambda { |time_ago| { :conditions => ['created_at   < ?', time_ago] } }

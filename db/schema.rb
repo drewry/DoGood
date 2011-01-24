@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110123022810) do
+ActiveRecord::Schema.define(:version => 20110124053718) do
 
   create_table "favorites", :force => true do |t|
     t.integer  "good_id"
@@ -24,6 +24,7 @@ ActiveRecord::Schema.define(:version => 20110123022810) do
     t.integer  "user_id"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "parent_id"
   end
 
   create_table "users", :force => true do |t|

@@ -7,13 +7,18 @@
       <div class="desc"><%= good.desc %></div>
       <div class="meta"><em><%= good.created_at.strftime("posted %B %d, %Y at %I:%M %p") %> GMT</em></div>
       <div class="actions">
-        So far <%= Favorite.where(:good_id => good).count %> ppl have 
+        <div>
+          So far <%= Favorite.where(:good_id => good).count %> ppl have 
           <% if user_signed_in? and current_user.id != good.user.id %>
             <%= link_to 'favorited', add_my_favorite_path(good) %>
           <% else %>
             favorited
           <% end %>        
-        this.
+          this.
+        </div>
+        <div>
+          This deed has inspired <%= pluralize(Good.where(:parent_id => good.id).count, "good deed") %>, has it <%= link_to "inspired you?", inspired_me_path(good) %>
+        </div>
       </div>
       <% if user_signed_in? %>
         <% if current_user.id == good.user.id %>

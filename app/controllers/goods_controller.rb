@@ -21,6 +21,18 @@ class GoodsController < ApplicationController
     end
   end
 
+  # GET /goods/inspired_me
+  # GET /goods/inspired_me.xml
+  def inspired_me
+    @good = Good.new
+    @parent = Good.find(params[:parent_id])
+    
+    respond_to do |format|
+      format.html
+      format.xml { render :xml => @good }
+    end
+  end
+  
   # GET /goods/new
   # GET /goods/new.xml
   def new
