@@ -9,6 +9,7 @@ gem 'sqlite3-ruby', :group => :development
 
 gem 'bcrypt-ruby'
 gem 'devise'
+gem 'omniauth'
 
 # Use unicorn as the web server
 # gem 'unicorn'
