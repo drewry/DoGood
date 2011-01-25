@@ -69,9 +69,6 @@ Dogoodapp::Application.routes.draw do
   match 'add_my_favorites/:good_id' => 'favorites#add_my_favorite', :as => 'add_my_favorite'
   
   match 'inspired_me/:parent_id' => 'goods#inspired_me', :as => 'inspired_me'
-  
-  # below are the routes for the API
-  match 'api/:data' => 'api#index'
-  
+    
   root :to => "home#index"
 end
