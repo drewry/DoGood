@@ -9,7 +9,9 @@ gem 'sqlite3-ruby', :group => :development
 
 gem 'bcrypt-ruby'
 gem 'devise'
+gem 'nifty-generators'
 gem 'omniauth'
+gem 'mongrel', '1.2.0.pre2'
 
 # Use unicorn as the web server
 # gem 'unicorn'
@@ -33,3 +35,4 @@ gem 'omniauth'
 # group :development, :test do
 #   gem 'webrat'
 # end
+gem "mocha", :group => :test

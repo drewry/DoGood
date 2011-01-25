@@ -1,9 +1,11 @@
 Dogoodapp::Application.routes.draw do
+  resources :authentications
+
   get "api/index"
 
   resources :favorites
 
-  devise_for :users
+  devise_for :users, :controllers => {:registrations => 'registrations'}
 
   resources :goods
 
@@ -69,6 +71,8 @@ Dogoodapp::Application.routes.draw do
   match 'add_my_favorites/:good_id' => 'favorites#add_my_favorite', :as => 'add_my_favorite'
   
   match 'inspired_me/:parent_id' => 'goods#inspired_me', :as => 'inspired_me'
+  
+  match '/auth/:provider/callback' => 'authentications#create'
     
   root :to => "home#index"
 end

@@ -1,5 +1,7 @@
 <h2>Sign in</h2>
 
+<p>Sign in using <a href="/authentications" class="twitter"><%= image_tag "twitter_32.png", :size => "32x32", :alt => "Twitter" %></a></p>
+
 <%= form_for(resource, :as => resource_name, :url => session_path(resource_name)) do |f| %>
   <p><%= f.label :email %><br />
   <%= f.text_field :email %></p>
