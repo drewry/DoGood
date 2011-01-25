@@ -1,6 +1,6 @@
 <h2>Edit <%= resource_name.to_s.humanize %></h2>
 
-<p>View linked twitter account <a href="/authentications" class="twitter"><%= image_tag "twitter_32.png", :size => "32x32", :alt => "Twitter" %></a></p>
+<p><a href="/auth/twitter">Add Twitter Account</a></p>
 
 <%= form_for(resource, :as => resource_name, :url => registration_path(resource_name), :html => { :method => :put }) do |f| %>
   <%= devise_error_messages! %>
