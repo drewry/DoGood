@@ -4,8 +4,10 @@
   <% @goods.each do |good| %>
   <!-- begin good -->
     <div class="good">
-      <div class="desc"><%= good.desc %></div>
-      <div class="meta"><em><%= good.created_at.strftime("posted %B %d, %Y at %I:%M %p") %> GMT</em></div>
+      <div class="deed">
+        <div class="desc"><%= good.desc %></div>
+        <div class="meta"><em><%= good.created_at.strftime("posted %B %d, %Y at %I:%M %p") %> GMT</em></div>
+      </div>
       <div class="actions">
         <div>
           So far <%= Favorite.where(:good_id => good).count %> ppl have 

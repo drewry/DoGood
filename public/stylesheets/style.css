@@ -93,13 +93,18 @@ a:hover {
 		margin: 15px;
 		width: 250px;
 		float: left;
+		min-height: 280px;
 	}
+	  .goods .good .deed {
+        min-height: 135px;
+    }
 		.goods .good .actions {
 			margin: 10px 0px 10px 0px;
 			padding: 15px;
 			background: #fff;
 			color: #333;
 			font-size: 12px;
+			min-height: 100px;
 		}
 			.goods .good .actions a {
 				color: #003e86;
